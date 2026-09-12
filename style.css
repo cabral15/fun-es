@@ -1,0 +1,96 @@
+:root{
+  --fundo:#050811;
+  --card:#0b0d20;
+  --botao:#242538;
+  --lilas:#b58cff;
+  --lilas-hover:#c7a8ff;
+  --texto:#eeeaff;
+  --texto-suave:#c9c4dc;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:24px;
+  background:radial-gradient(circle at top,#12102b 0%,#050811 48%,#02040a 100%);
+  color:var(--texto);
+  font-family:"Inter",sans-serif;
+}
+.caixa-principal{
+  width:min(100%,600px);
+  padding:38px 30px;
+  text-align:center;
+  background:var(--card);
+  border:1px solid rgba(181,140,255,.14);
+  border-radius:22px;
+  box-shadow:0 20px 70px rgba(0,0,0,.4);
+}
+.etiqueta{
+  margin-bottom:18px;
+  color:var(--lilas-hover);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.25em;
+}
+h1{
+  margin:0 0 30px;
+  color:var(--lilas);
+  font-family:"Chakra Petch",sans-serif;
+  font-size:clamp(34px,6vw,52px);
+  line-height:1;
+  letter-spacing:-.04em;
+}
+.caixa-perguntas{
+  margin-bottom:24px;
+  color:var(--texto);
+  font-family:"Chakra Petch",sans-serif;
+  font-size:clamp(18px,3vw,23px);
+  line-height:1.4;
+}
+.caixa-alternativas{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+button{
+  width:100%;
+  margin:0;
+  padding:16px 18px;
+  border:1px solid transparent;
+  border-radius:11px;
+  background:var(--botao);
+  color:var(--texto);
+  cursor:pointer;
+  font-family:"Inter",sans-serif;
+  font-size:14px;
+  line-height:1.45;
+  transition:.2s ease;
+}
+.caixa-alternativas button:first-child{
+  background:var(--lilas);
+  color:#171025;
+  font-weight:700;
+}
+button:hover{
+  transform:translateY(-2px);
+  border-color:var(--lilas-hover);
+}
+.caixa-alternativas button:first-child:hover{background:var(--lilas-hover)}
+button:focus-visible{outline:3px solid var(--lilas-hover);outline-offset:3px}
+.caixa-resultado{margin-top:24px}
+.texto-resultado{
+  color:var(--texto-suave);
+  line-height:1.7;
+}
+.texto-resultado b{
+  color:var(--lilas-hover);
+  font-family:"Chakra Petch",sans-serif;
+}
+.botao-reiniciar{margin-top:10px}
+@media(max-width:480px){
+  body{padding:14px}
+  .caixa-principal{padding:30px 20px}
+}
